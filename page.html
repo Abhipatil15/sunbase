@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-image: url("https://media.istockphoto.com/id/1436149649/photo/elderly-women-talking-about-healthcare-service-in-waiting-room.jpg?s=1024x1024&w=is&k=20&c=UOtad2P8Yq-ciyLTn8HWbwLUW5bowqEEAcuz-By3r1M=");
+            
+             background-color: #cccccc;
+             background-repeat: no-repeat;
+             height:1000px;
+             width:1000px;
+            }
+        </style>
+    </head>
+  <body>
+
+    
+    <div align="center">
+    <h1>
+        The Customer Churn prediction
+    </h1>
+    <div align="center">
+    <form action="{{url_for('predict')}}" method="post">
+        <table>
+        <tr>
+        <td>
+        <label>Gender</label></td>
+        <td>
+        <input type="text" name="gender" required></td>
+        </tr>
+        <tr>
+        <td>
+        <label>Loaction</label></td>
+        <td>
+        <input type="text" name="loaction" required></td>
+        </tr>
+        <tr>
+        <td>
+        <label>Age_Group</label></td>
+        <td>
+        <input type="text" name="Age" required></td>
+        </tr>
+        <tr>
+        <td>
+        <label>Subscription_Length_Month</label></td>
+        <td>
+        <input type="text" name="SubscriptionLength_Month" required></td>
+        </tr>
+        <tr>
+            <td>
+        <label>Monthly_Bills</label></td>
+        <td><input type="text" name="MonthlyBills" required></td>
+        </tr>
+        <tr>
+         <td><label>TotalUsage_GB</label></td>
+        <td><input type="text" name="TotalUsageGB" required></td>
+        </tr>
+        <tr>
+            <td><button type="submit">predict</button></td></tr>
+
+        </table>
+    </form>
+     <h2>{{prediction_text}}</h2>
+  </body>
+</html>  
+              
+                                  
